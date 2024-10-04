@@ -169,6 +169,32 @@ nav {
     max-width: 600px; /* Limit the width of text content */
 }
 
+.hero-text h1,
+.hero-text h3,
+.hero-text p {
+    margin: 0 auto; /* Ensure centered alignment */
+}
+
+.hero-text h1 {
+    font-size: 36px;
+    color: #00a0ff; /* Changed header text color */
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.hero-text h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.hero-text p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 25px;
+}
+
 /* Button Styling (Shared across the site) */
 .cta-button,
 .send-button {
