@@ -12,52 +12,53 @@ body {
     min-height: 100vh; /* Ensure body covers full viewport height */
 }
 
-header {
-    text-align: center;
-    padding: 20px 0;
+/* Navigation Bar */
+nav {
+    background-color: #333; /* Dark grey background */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between; /* Align items between left and right */
+    align-items: center;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    border-bottom: 2px solid #000;
 }
 
-/* Logo styling */
+/* Logo on the left */
 .logo-container {
-    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
 }
 
 .logo {
-    width: 200px; /* Original size for desktop */
+    width: 150px; /* Size of the logo */
     height: auto;
 }
 
-/* Navigation styling */
-nav {
-    background: #444;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    width: 100%; /* Full width */
-}
-
+/* Navigation Links on the right */
 .nav-links {
     list-style: none;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 .nav-links li {
-    margin: 0 10px;
+    margin: 0 20px;
+    position: relative;
 }
 
+/* 3D Navigation Link Styles */
 .nav-links li a {
     text-decoration: none;
     color: white;
     font-size: 18px;
     font-weight: bold;
-    padding: 15px 30px;
+    padding: 10px 15px;
     display: inline-block;
     background: linear-gradient(to bottom, #555 0%, #222 100%);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), inset 0 -1px 1px rgba(255, 255, 255, 0.1);
     border: 1px solid #000;
     border-radius: 5px;
-    position: relative;
     transition: all 0.3s ease-in-out;
 }
 
@@ -71,53 +72,38 @@ nav {
                 inset 0 -1px 1px rgba(255, 255, 255, 0.1);
 }
 
-/* For the 3D pressed-down effect on hover */
-.nav-links li a:active {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), inset 0 2px 4px rgba(0, 0, 0, 0.2);
-    transform: translateY(2px); /* Make it appear pressed */
+/* Facebook Icon in the upper-right corner */
+.social-media-icons {
+    display: flex;
+    align-items: center;
+}
+
+.social-media-icons a {
+    margin-left: 20px;
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.social-media-icons a:hover {
+    color: #00a0ff; /* Neon blue on hover */
 }
 
 /* Mobile Menu (collapsed by default) */
 @media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
     .nav-links {
-        display: none; /* Hidden by default on mobile */
         flex-direction: column;
         align-items: center;
-        background-color: #333; /* Dark grey background to match desktop */
-        padding: 20px 0;
-        width: 100%; /* Full width of the page */
-        border-radius: 0; /* Remove the rounded corners */
-        box-shadow: none; /* Remove any shadow */
+        width: 100%;
+        margin-top: 10px;
     }
 
-    .nav-links.open {
-        display: flex; /* Show when 'MENU' is clicked */
-    }
-
-    /* Style the entire box that will show 'MENU' */
-    #menu-box {
-        display: block;
-        background-color: #333; /* Dark grey background to match desktop */
-        color: #fff;
-        font-size: 18px;
-        font-weight: bold;
-        padding: 10px;
-        border-radius: 0; /* Remove rounded corners */
-        cursor: pointer;
-        margin: 0 auto;
-        width: 100%; /* Full width */
-        box-shadow: none; /* Remove shadow */
-        text-align: center;
-    }
-
-    /* Hide the desktop version of the menu */
-    .logo {
-        width: 120px; /* Smaller logo size for mobile */
-    }
-
-    nav {
-        width: 100%; /* Full width for nav on mobile */
-        margin: 0 auto;
+    .logo-container {
+        margin-bottom: 10px;
     }
 }
 
