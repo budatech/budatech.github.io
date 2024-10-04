@@ -12,39 +12,43 @@ body {
     min-height: 100vh; /* Ensure body covers full viewport height */
 }
 
-/* Navigation Bar */
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Logo styling */
+.logo-container {
+    margin-bottom: 20px;
+    float: left; /* Float logo to the left */
+}
+
+.logo {
+    width: 200px; /* Original size for desktop */
+    height: auto;
+}
+
+/* Navigation styling */
 nav {
     background-color: #333;
-    padding: 10px 20px;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
 
-/* Logo on the left */
-.logo-container {
-    display: flex;
-    align-items: center;
-}
-
-.logo {
-    width: 150px; /* Size of the logo */
-    height: auto;
-}
-
-/* Parallelogram Navigation Links */
+/* Parallelogram shape for menu items */
 .nav-links {
     list-style: none;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    padding: 0;
 }
 
 .nav-links li {
     margin-left: 10px;
-    transform: skew(-20deg); /* Create the parallelogram shape */
 }
 
 .nav-links li a {
@@ -53,68 +57,62 @@ nav {
     font-size: 18px;
     font-weight: bold;
     padding: 15px 30px;
-    background-color: #444; /* Slightly darker grey */
     display: block;
-    transform: skew(20deg); /* Reverse the skew for the text */
+    position: relative;
+    background-color: #444;
+    clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%); /* Parallelogram shape */
     transition: all 0.3s ease;
-    text-align: center;
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
+    z-index: 1;
 }
 
-/* Hover effect */
+/* Hover effect for menu items */
 .nav-links li a:hover {
-    color: #00a0ff; /* Neon blue on hover */
-    border-left: 4px solid #00a0ff; /* Neon blue glow on the left */
-    border-right: 4px solid #00a0ff; /* Neon blue glow on the right */
+    background-color: #222;
+    color: #00a0ff;
+    box-shadow: 0 0 10px #00a0ff;
 }
 
-/* Social media icon on the upper-right corner */
+.nav-links li a:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #00a0ff;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.nav-links li a:hover:after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Social media styling */
 .social-media-icons {
-    display: flex;
-    align-items: center;
+    margin-right: 20px;
 }
 
 .social-media-icons a {
-    margin-left: 20px;
-    color: white;
+    color: #00a0ff;
     font-size: 24px;
+    margin-left: 10px;
     text-decoration: none;
-}
-
-.social-media-icons a:hover {
-    color: #00a0ff; /* Neon blue on hover */
-}
-
-/* Mobile Menu (collapsed by default) */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        margin-top: 10px;
-    }
-
-    .logo-container {
-        margin-bottom: 10px;
-    }
 }
 
 /* Hero Section */
 .hero-section {
-    background: none; /* Let the gradient background show through */
-    padding: 0; /* Remove padding around the section */
-    margin: 0; /* Ensure no margin */
-    width: 100%; /* Full width of the page */
-    height: 432px; /* Fixed height for desktop */
+    background: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 432px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 0; /* Remove rounded corners */
+    border-radius: 0;
 }
 
 .hero-container {
@@ -122,42 +120,42 @@ nav {
     flex-wrap: wrap;
     align-items: stretch;
     justify-content: space-between;
-    width: 100%; /* Full width of the parent */
-    height: 100%; /* Ensure the container takes up full height */
+    width: 100%;
+    height: 100%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .hero-image img {
     max-width: 100%;
-    height: 100%; /* Adjust height to match the text container */
-    margin: 0; /* Remove margin */
-    border-radius: 0; /* Remove rounded corners */
-    box-shadow: none; /* Remove box shadow */
+    height: 100%;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
 }
 
 .hero-text-container {
-    background: linear-gradient(135deg, #fafffb, #bdbdbd); /* Gradient background */
+    background: linear-gradient(135deg, #fafffb, #bdbdbd);
     flex: 1;
     padding: 40px;
-    box-shadow: none; /* Remove box shadow */
+    box-shadow: none;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    width: 100%; /* Full width */
-    max-width: 600px; /* Limit the width of text content */
+    width: 100%;
+    max-width: 600px;
 }
 
 .hero-text h1,
 .hero-text h3,
 .hero-text p {
-    margin: 0 auto; /* Ensure centered alignment */
+    margin: 0 auto;
 }
 
 .hero-text h1 {
     font-size: 36px;
-    color: #00a0ff; /* Changed header text color */
+    color: #00a0ff;
     font-weight: bold;
     margin-bottom: 20px;
     text-transform: uppercase;
@@ -175,18 +173,18 @@ nav {
     margin-bottom: 25px;
 }
 
-/* Button Styling (Shared across the site) */
+/* Button Styling */
 .cta-button,
 .send-button {
     display: inline-block;
-    background-color: #00a0ff; /* Primary button color now blue */
+    background-color: #00a0ff;
     color: #fff;
     font-size: 18px;
     font-weight: bold;
     padding: 15px 30px;
     text-decoration: none;
     border-radius: 25px;
-    transition: background-color 0.3s ease; /* Smooth transition */
+    transition: background-color 0.3s ease;
     cursor: pointer;
     text-align: center;
     border: none;
@@ -194,12 +192,12 @@ nav {
 
 .cta-button:hover,
 .send-button:hover {
-    background-color: #0080cc; /* Slightly darker blue on hover */
+    background-color: #0080cc;
 }
 
 /* Footer Styles */
 footer {
-    background-color: #333; /* Dark grey background to match the top menu */
+    background-color: #333;
     padding: 20px 0;
     text-align: center;
     width: 100%;
@@ -216,7 +214,7 @@ footer {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    display: flex; /* Flexbox layout for horizontal alignment */
+    display: flex;
     justify-content: space-around;
     width: 100%;
 }
@@ -228,7 +226,7 @@ footer {
 
 .footer-nav li a {
     text-decoration: none;
-    color: #fff; /* White text for better contrast */
+    color: #fff;
     font-size: 18px;
     font-weight: bold;
     padding: 10px 20px;
@@ -236,26 +234,25 @@ footer {
     position: relative;
 }
 
-/* Hover effect with LED-like blue underline for footer */
-.footer-nav li a::after {
+.footer-nav li a:after {
     content: "";
     position: absolute;
-    left: 50%; /* Start at the center */
-    bottom: -5px; /* Position below the text */
+    left: 50%;
+    bottom: -5px;
     width: 0%;
     height: 3px;
-    background-color: #00a0ff; /* Neon blue color to match the top */
-    box-shadow: 0 0 10px #00a0ff, 0 0 20px #00a0ff; /* LED light effect */
-    transition: width 0.3s ease-in-out, left 0.3s ease-in-out; /* Smooth animation */
+    background-color: #00a0ff;
+    box-shadow: 0 0 10px #00a0ff, 0 0 20px #00a0ff;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
 }
 
-.footer-nav li a:hover::after {
+.footer-nav li a:hover:after {
     width: 100%;
-    left: 0; /* Expand the underline to full width */
+    left: 0;
 }
 
 .footer-nav li a:hover {
-    color: #00a0ff; /* Change text color on hover to match the LED effect */
+    color: #00a0ff;
 }
 
 .footer-info {
@@ -268,32 +265,43 @@ footer {
 }
 
 .footer-info a {
-    color: inherit; /* Inherit the default text color */
-    text-decoration: none; /* Removes the underline */
+    color: inherit;
+    text-decoration: none;
 }
 
 .footer-info a:hover {
-    color: #00a0ff; /* Optional: Match hover color for phone number */
-    text-decoration: none; /* Ensure no underline on hover */
+    color: #00a0ff;
+    text-decoration: none;
 }
 
-/* Back to Top Button */
-#backToTop {
-    display: none; /* Hidden by default */
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 99;
-    font-size: 18px;
-    border: none;
-    outline: none;
-    background-color: #47cee6;
-    color: white;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 50%;
-}
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+    .hero-section {
+        height: auto;
+        min-height: 300px;
+    }
 
-#backToTop:hover {
-    background-color: #2890df;
+    .hero-container {
+        flex-direction: column;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .hero-text-container {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .nav-links li a {
+        clip-path: none;
+        padding: 15px;
+        text-align: center;
+    }
 }
