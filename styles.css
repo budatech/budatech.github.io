@@ -88,10 +88,11 @@ nav {
         display: none; /* Hidden by default on mobile */
         flex-direction: column;
         align-items: center;
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 25px;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        background-color: #333; /* Dark grey background to match desktop */
+        padding: 20px 0;
+        width: 100%; /* Full width of the page */
+        border-radius: 0; /* Remove the rounded corners */
+        box-shadow: none; /* Remove any shadow */
     }
 
     .nav-links.open {
@@ -101,16 +102,16 @@ nav {
     /* Style the entire box that will show 'MENU' */
     #menu-box {
         display: block;
-        background-color: #fff;
-        color: #333;
+        background-color: #333; /* Dark grey background to match desktop */
+        color: #fff;
         font-size: 18px;
         font-weight: bold;
         padding: 10px;
-        border-radius: 25px;
+        border-radius: 0; /* Remove rounded corners */
         cursor: pointer;
         margin: 0 auto;
-        width: 90%; /* Make the menu button wider */
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        width: 100%; /* Full width */
+        box-shadow: none; /* Remove shadow */
         text-align: center;
     }
 
@@ -120,7 +121,7 @@ nav {
     }
 
     nav {
-        width: 90%;
+        width: 100%; /* Full width for nav on mobile */
         margin: 0 auto;
     }
 }
