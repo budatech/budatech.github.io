@@ -24,13 +24,41 @@
       "openingHours": "Mo-Fr 08:00-19:00",
       "image": "https://www.budatech.org/budatechlogo.png"
     }
-    </script>
+    </script> <!-- Closed the script properly -->
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <link rel="stylesheet" href="styles.css">
 
     <script>
+        // Function to dynamically load content into the #content div
+        function loadPage(page, section = null) {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', page, true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    document.getElementById('content').innerHTML = xhr.responseText;
+
+                    // If a section hash is provided, scroll to that section after loading
+                    if (section) {
+                        const targetElement = document.getElementById(section);
+                        if (targetElement) {
+                            targetElement.scrollIntoView({ behavior: 'smooth' });
+                        }
+                    } else {
+                        // Scroll to the top of the page
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                }
+            };
+            xhr.send();
+        }
+
+        // Load the home page by default when the page loads
+        window.onload = function() {
+            loadPage('home.html');
+        };
+
         // Toggle mobile menu open/close
         function toggleMenu() {
             var menu = document.getElementById('nav-menu');
@@ -38,10 +66,29 @@
         }
     </script>
     
+    <script>
+        // Show the button when the user scrolls down 200px
+        window.onscroll = function() {scrollFunction()};
+    
+        function scrollFunction() {
+            const backToTopButton = document.getElementById("backToTop");
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        }
+    
+        // Scroll to the top of the document
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+    
 </head>
 <body>
 
-    <!-- Logo and Mobile Navigation Button -->
+    <!-- Logo and Navigation Menu -->
     <header>
         <div class="logo-container">
             <a href="#" onclick="loadPage('home.html'); return false;">
@@ -49,13 +96,18 @@
             </a>
         </div>
         
-        <!-- Menu Button for Mobile -->
-        <div class="burger" onclick="toggleMenu()">
-            <i class="fas fa-bars"></i> <!-- Burger icon -->
+        <!-- Social Media Icons -->
+        <div class="social-media-icons">
+            <a href="https://www.facebook.com/BudasTech/" target="_blank" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+            </a>
         </div>
-
-        <!-- Navigation Menu -->
+        
+        <!-- Navigation Links -->
         <nav>
+            <!-- Menu Button for Mobile -->
+            <div class="menu-button" onclick="toggleMenu()">MENU</div>
+
             <ul class="nav-links" id="nav-menu">
                 <li><a href="#" onclick="loadPage('home.html')">HOME</a></li>
                 <li><a href="#" onclick="loadPage('services.html')">SERVICES</a></li>
@@ -63,13 +115,6 @@
                 <li><a href="#" onclick="loadPage('contact.html')">CONTACT</a></li>
             </ul>
         </nav>
-
-        <!-- Social Media Icons -->
-        <div class="social-media-icons">
-            <a href="https://www.facebook.com/BudasTech/" target="_blank" class="social-icon">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-        </div>
     </header>
 
     <!-- Placeholder Content Section -->
@@ -95,6 +140,8 @@
             </div>
         </div>
     </footer>
-
+    
+    <!-- Back to Top Button -->
+    <button onclick="scrollToTop()" id="backToTop" title="Back to Top">↑</button>
 </body>
 </html>
