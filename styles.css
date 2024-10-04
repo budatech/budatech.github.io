@@ -17,11 +17,10 @@ nav {
     background-color: #333;
     padding: 10px 20px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-    border-bottom: 2px solid #000;
 }
 
 /* Logo on the left */
@@ -40,11 +39,12 @@ nav {
     list-style: none;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
 }
 
 .nav-links li {
     margin-left: 10px;
-    transform: skew(-20deg); /* Create the parallelogram effect */
+    transform: skew(-20deg); /* Create the parallelogram shape */
 }
 
 .nav-links li a {
@@ -53,27 +53,20 @@ nav {
     font-size: 18px;
     font-weight: bold;
     padding: 15px 30px;
-    background: linear-gradient(to bottom, #555 0%, #222 100%);
-    border: 2px solid #222;
+    background-color: #444; /* Slightly darker grey */
     display: block;
     transform: skew(20deg); /* Reverse the skew for the text */
-    position: relative;
     transition: all 0.3s ease;
     text-align: center;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
 }
 
-/* Neon hover effect */
+/* Hover effect */
 .nav-links li a:hover {
-    background: linear-gradient(to bottom, #000 0%, #111 100%);
-    color: #00a0ff;
-    box-shadow: 0 0 15px #00a0ff, 0 0 20px #00a0ff, 0 0 30px #00a0ff; /* Outer neon glow */
-    border-color: #00a0ff;
-}
-
-/* For the 3D pressed-down effect on hover */
-.nav-links li a:active {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), inset 0 2px 4px rgba(0, 0, 0, 0.2);
-    transform: translateY(2px); /* Make it appear pressed */
+    color: #00a0ff; /* Neon blue on hover */
+    border-left: 4px solid #00a0ff; /* Neon blue glow on the left */
+    border-right: 4px solid #00a0ff; /* Neon blue glow on the right */
 }
 
 /* Social media icon on the upper-right corner */
