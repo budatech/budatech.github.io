@@ -27,59 +27,54 @@ header {
     height: auto;
 }
 
-/* Navigation styling for desktop */
+/* Navigation styling */
 nav {
-    background-color: #333; /* Dark grey background */
-    padding: 10px 0; /* Remove the side padding */
-    margin: 0; /* Remove margin */
-    width: 100%; /* Make it full width */
-    border-radius: 0; /* Remove rounded corners */
-    box-shadow: none; /* Remove shadow for cleaner look */
+    background: #444;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Full width */
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    justify-content: space-around; /* Spread links across the full width */
-    padding: 0;
-    margin: 0;
+    justify-content: center;
 }
 
 .nav-links li {
-    margin: 0;
-    position: relative;
+    margin: 0 10px;
 }
 
 .nav-links li a {
     text-decoration: none;
-    color: #fff; /* White text for better contrast */
+    color: white;
     font-size: 18px;
     font-weight: bold;
-    padding: 10px 20px;
+    padding: 15px 30px;
     display: inline-block;
+    background: linear-gradient(to bottom, #555 0%, #222 100%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), inset 0 -1px 1px rgba(255, 255, 255, 0.1);
+    border: 1px solid #000;
+    border-radius: 5px;
     position: relative;
+    transition: all 0.3s ease-in-out;
 }
 
-/* Hover effect with LED-like blue underline */
-.nav-links li a::after {
-    content: "";
-    position: absolute;
-    left: 50%; /* Start at the center */
-    bottom: -5px; /* Position below the text */
-    width: 0%;
-    height: 3px;
-    background-color: #00a0ff; /* Neon blue color */
-    box-shadow: 0 0 10px #00a0ff, 0 0 20px #00a0ff; /* Create the LED light effect */
-    transition: width 0.3s ease-in-out, left 0.3s ease-in-out; /* Smooth animation */
-}
-
-.nav-links li a:hover::after {
-    width: 100%;
-    left: 0; /* Expand the underline to full width */
-}
-
+/* Neon hover effect */
 .nav-links li a:hover {
-    color: #00a0ff; /* Optional: Change text color on hover to match the LED effect */
+    background: linear-gradient(to bottom, #222 0%, #000 100%);
+    color: #00a0ff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 
+                0 0 10px #00a0ff, 
+                0 0 20px #00a0ff, 
+                inset 0 -1px 1px rgba(255, 255, 255, 0.1);
+}
+
+/* For the 3D pressed-down effect on hover */
+.nav-links li a:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(2px); /* Make it appear pressed */
 }
 
 /* Mobile Menu (collapsed by default) */
