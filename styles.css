@@ -14,11 +14,11 @@ body {
 
 /* Navigation Bar */
 nav {
-    background-color: #333; /* Dark grey background */
+    background-color: #333;
     padding: 10px 20px;
     display: flex;
-    justify-content: space-between; /* Align items between left and right */
     align-items: center;
+    justify-content: space-between;
     width: 100%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     border-bottom: 2px solid #000;
@@ -35,7 +35,7 @@ nav {
     height: auto;
 }
 
-/* Navigation Links on the right */
+/* Parallelogram Navigation Links */
 .nav-links {
     list-style: none;
     display: flex;
@@ -43,36 +43,40 @@ nav {
 }
 
 .nav-links li {
-    margin: 0 20px;
-    position: relative;
+    margin-left: 10px;
+    transform: skew(-20deg); /* Create the parallelogram effect */
 }
 
-/* 3D Navigation Link Styles */
 .nav-links li a {
     text-decoration: none;
     color: white;
     font-size: 18px;
     font-weight: bold;
-    padding: 10px 15px;
-    display: inline-block;
+    padding: 15px 30px;
     background: linear-gradient(to bottom, #555 0%, #222 100%);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), inset 0 -1px 1px rgba(255, 255, 255, 0.1);
-    border: 1px solid #000;
-    border-radius: 5px;
-    transition: all 0.3s ease-in-out;
+    border: 2px solid #222;
+    display: block;
+    transform: skew(20deg); /* Reverse the skew for the text */
+    position: relative;
+    transition: all 0.3s ease;
+    text-align: center;
 }
 
 /* Neon hover effect */
 .nav-links li a:hover {
-    background: linear-gradient(to bottom, #222 0%, #000 100%);
+    background: linear-gradient(to bottom, #000 0%, #111 100%);
     color: #00a0ff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 
-                0 0 10px #00a0ff, 
-                0 0 20px #00a0ff, 
-                inset 0 -1px 1px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 15px #00a0ff, 0 0 20px #00a0ff, 0 0 30px #00a0ff; /* Outer neon glow */
+    border-color: #00a0ff;
 }
 
-/* Facebook Icon in the upper-right corner */
+/* For the 3D pressed-down effect on hover */
+.nav-links li a:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(2px); /* Make it appear pressed */
+}
+
+/* Social media icon on the upper-right corner */
 .social-media-icons {
     display: flex;
     align-items: center;
@@ -299,38 +303,4 @@ footer {
 
 #backToTop:hover {
     background-color: #2890df;
-}
-
-/* Social media icon colors */
-.social-media-icons a {
-    color: #00a0ff; /* Change to blue for default state */
-    font-size: 24px;
-    margin: 0 10px;
-    text-decoration: none;
-}
-
-.social-media-icons a:hover {
-    color: #0080cc; /* Darker blue on hover */
-}
-
-/* Responsive Styles for Mobile */
-@media (max-width: 768px) {
-    .hero-section {
-        height: auto; /* Flexible height for mobile */
-        min-height: 300px; /* Set a minimum height for the section */
-    }
-
-    .hero-container {
-        flex-direction: column; /* Stack elements vertically */
-    }
-
-    .hero-image img {
-        width: 100%; /* Make the image full width on mobile */
-        height: auto; /* Keep aspect ratio */
-    }
-
-    .hero-text-container {
-        padding: 20px; /* Smaller padding on mobile */
-        max-width: 100%; /* Allow the text to take full width */
-    }
 }
