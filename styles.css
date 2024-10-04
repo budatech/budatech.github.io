@@ -126,17 +126,6 @@ nav {
     }
 }
 
-/* Desktop Layout remains unchanged */
-@media (min-width: 769px) {
-    .menu-button {
-        display: none; /* Hide the "MENU" button on desktop */
-    }
-
-    .nav-links {
-        display: flex; /* Show the menu normally on desktop */
-    }
-}
-
 /* Hero Section */
 .hero-section {
     background: none; /* Let the gradient background show through */
@@ -179,7 +168,7 @@ nav {
 
 .hero-text h1 {
     font-size: 36px;
-    color: #f3aa4c;
+    color: #00a0ff; /* Changed header text color */
     font-weight: bold;
     margin-bottom: 20px;
     text-transform: uppercase;
@@ -201,7 +190,7 @@ nav {
 .cta-button,
 .send-button {
     display: inline-block;
-    background-color: #f5ab40; /* Primary button color */
+    background-color: #00a0ff; /* Primary button color now blue */
     color: #fff;
     font-size: 18px;
     font-weight: bold;
@@ -216,7 +205,7 @@ nav {
 
 .cta-button:hover,
 .send-button:hover {
-    background-color: #ef602c; /* Hover color */
+    background-color: #0080cc; /* Slightly darker blue on hover */
 }
 
 /* Footer Styles */
@@ -320,18 +309,14 @@ footer {
     background-color: #2890df;
 }
 
-.social-media-icons {
-    text-align: center;
-    margin: 10px 0;
-}
-
+/* Social media icon colors */
 .social-media-icons a {
-    margin: 0 10px;
-    color: #ffffff; /* Change this to your preferred icon color */
+    color: #00a0ff; /* Change to blue for default state */
     font-size: 24px;
+    margin: 0 10px;
     text-decoration: none;
 }
 
 .social-media-icons a:hover {
-    color: #f5ab40; /* Optional hover color for icons */
+    color: #0080cc; /* Darker blue on hover */
 }
