@@ -218,377 +218,9 @@ nav {
     background-color: #ef602c; /* Hover color */
 }
 
-/* Service Section for Dog Walking and Pet Sitting */
-.services-section {
-    display: flex;
-    justify-content: center;
-    padding: 20px 0;
-    /* Removed the background color so the gradient from the body will show */
-}
-
-.service-container {
-    display: flex;
-    gap: 20px;
-}
-
-.service-image {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-}
-
-.service-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 15px; /* Ensure images have rounded corners */
-}
-
-.service-image:hover {
-    transform: scale(1.05);
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.3); /* 30% opacity */
-    z-index: 1;
-}
-
-.service-image h2 {
-    position: absolute;
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    z-index: 2;
-    pointer-events: none; /* Prevent text from being clickable */
-    text-align: center;
-}
-
-.service-image a {
-    display: block;
-    text-decoration: none;
-}
-
-@media (max-width: 768px) {
-    .service-container {
-        flex-direction: column;
-        align-items: center; /* Center images in the middle on mobile */
-    }
-
-    .service-image {
-        width: 90%; /* Reduce the image width for mobile */
-        height: auto; /* Let the height adjust automatically */
-    }
-}
-
-/* About Us Page Styles */
-
-/* Section Styling */
-.about-section {
-    display: flex;
-    align-items: stretch;
-    margin: 20px auto;
-    max-width: 1200px;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* For the Drop-In Visits section with image on the right */
-.about-section.reverse {
-    flex-direction: row-reverse; /* This ensures the image is on the right and text on the left */
-}
-
-/* Image Styling */
-.about-section .about-image {
-    width: 50%;
-}
-
-.about-section .about-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-/* Text Container Styling */
-.about-section .about-text-container {
-    width: 50%;
-    background-color: #fff;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-/* Headings and Paragraphs */
-.about-section .about-text-container h2 {
-    color: #f3aa4c;
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-.about-section .about-text-container p {
-    font-size: 16px;
-    color: #333;
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-/* Health Benefits Lists */
-.about-section .about-text-container ul {
-    list-style-type: disc;
-    margin-left: 20px;
-    margin-bottom: 20px;
-}
-
-.about-section .about-text-container ul li {
-    margin-bottom: 10px;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .about-section {
-        flex-direction: column;
-    }
-
-    .about-section.reverse {
-        flex-direction: column;
-    }
-
-    .about-section .about-image,
-    .about-section .about-text-container {
-        width: 100%;
-    }
-
-    .about-section .about-text-container {
-        padding: 20px;
-    }
-}
-
-/* Contact form specific adjustments */
-.send-button {
-    width: 100%;
-    border-radius: 25px;
-}
-
-/* Schedule Calendar styling */
-#schedule-section {
-    text-align: center;
-    padding: 20px;
-}
-
-#back-to-home {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #2890df;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-#back-to-home:hover {
-    background-color: #47cee6;
-}
-
-/* Contact form styling */
-.contact-section {
-    text-align: left;
-    padding: 20px;
-}
-
-.contact-form h2 {
-    text-align: center; /* Center the heading */
-    color: #333; /* Existing color */
-    margin-bottom: 20px; /* Add some space below the heading */
-}
-
-.contact-form {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 600px;
-    margin: 20px auto;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.email-link {
-    color: #f3aa4c; /* Use the yellow color used elsewhere */
-    text-decoration: none; /* Remove underline */
-    font-weight: bold; /* Make it bold to match the style */
-}
-
-.email-link:hover {
-    text-decoration: none; /* Ensure no underline on hover */
-    color: #ef602c; /* Optional: change to a hover color */
-}
-
-.map-section {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 600px;
-    margin: 20px auto;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-iframe {
-    width: 100%;
-    height: 350px;
-    border: none;
-    border-radius: 10px;
-}
-
-.address-section {
-    margin-top: 20px;
-    font-size: 18px;
-    color: #333;
-    text-align: center;
-}
-
-.address-section h3 {
-    color: #f3aa4c;
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.phone-number {
-    color: inherit; /* Inherits the color of the parent element */
-    text-decoration: none; /* Removes underline */
-    cursor: pointer; /* Optional: Shows a pointer on hover to indicate it's clickable */
-}
-
-.phone-number:hover, .phone-number:focus, .phone-number:active {
-    text-decoration: none; /* No underline on hover, focus, or active */
-    color: inherit; /* Keep the color the same on hover */
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-label {
-    display: block;
-    font-size: 16px;
-    margin-bottom: 5px;
-    text-align: left;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
-}
-
-textarea {
-    height: 150px;
-    resize: vertical;
-}
-
-
-/* Services Offered Page Styles */
-
-/* Renamed to services-offered-section */
-.services-offered-section {
-    display: flex;
-    align-items: stretch;
-    margin: 40px auto; /* Adds spacing between sections */
-    max-width: 1200px;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15); /* Shadow applied closely */
-}
-
-/* For the Drop-In Visits section with image on the right */
-.services-offered-section.reverse {
-    flex-direction: row-reverse; /* This ensures the image is on the right and text on the left */
-}
-
-.services-offered-image {
-    flex: 1;
-}
-
-.services-offered-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block; /* Ensure the image fully fills the container */
-}
-
-/* Text Container Styling */
-.services-offered-text-container {
-    flex: 1;
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 0 15px 15px 15; /* Rounded corners only on the right */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-/* Headings and Paragraphs */
-.services-offered-text-container h2 {
-    color: #f3aa4c;
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-.services-offered-text-container p {
-    font-size: 16px;
-    color: #333;
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .services-offered-section {
-        flex-direction: column;
-        width: 100%;
-        border-radius: 15px; /* Rounded corners for the whole section on mobile */
-        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15); /* Ensure shadow remains tight */
-    }
-
-    .services-offered-section.reverse {
-        flex-direction: column;
-        width: 100%;
-        border-radius: 15px; /* Rounded corners for the whole section on mobile */
-        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15); /* Ensure shadow remains tight */
-    }
-
-    .services-offered-image {
-        width: 100%;
-        height: auto; /* Let the image adjust to its natural height */
-        border-radius: 15px 15px 0 0; /* Rounded corners on the top */
-    }
-
-    .services-offered-text-container {
-        width: 100%;
-        padding: 20px;
-        border-radius: 0 0 15px 15px; /* Rounded corners on the bottom */
-    }
-}
-
+/* Footer Styles */
 footer {
-    background-color: #f3f3f3;
+    background-color: #333; /* Dark grey background to match the top menu */
     padding: 20px 0;
     text-align: center;
     border-top: 1px solid #ddd;
@@ -605,38 +237,68 @@ footer {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    display: flex; /* Flexbox layout for horizontal alignment */
+    justify-content: space-around;
+    width: 100%;
 }
 
 .footer-nav li {
-    display: inline;
-    margin: 0 15px;
+    margin: 0 20px;
+    position: relative;
 }
 
 .footer-nav li a {
     text-decoration: none;
-    color: #333;
+    color: #fff; /* White text for better contrast */
+    font-size: 18px;
     font-weight: bold;
+    padding: 10px 20px;
+    display: inline-block;
+    position: relative;
+}
+
+/* Hover effect with LED-like blue underline for footer */
+.footer-nav li a::after {
+    content: "";
+    position: absolute;
+    left: 50%; /* Start at the center */
+    bottom: -5px; /* Position below the text */
+    width: 0%;
+    height: 3px;
+    background-color: #00a0ff; /* Neon blue color to match the top */
+    box-shadow: 0 0 10px #00a0ff, 0 0 20px #00a0ff; /* LED light effect */
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out; /* Smooth animation */
+}
+
+.footer-nav li a:hover::after {
+    width: 100%;
+    left: 0; /* Expand the underline to full width */
+}
+
+.footer-nav li a:hover {
+    color: #00a0ff; /* Change text color on hover to match the LED effect */
 }
 
 .footer-info {
     margin-top: 15px;
+    color: #666;
 }
 
 .footer-info p {
     margin: 5px 0;
-    color: #666;
 }
 
 .footer-info a {
-    color: inherit; /* Inherits the default text color of the parent */
+    color: inherit; /* Inherit the default text color */
     text-decoration: none; /* Removes the underline */
 }
 
 .footer-info a:hover {
-    color: #47cee6; /* Optional: Change color on hover */
+    color: #00a0ff; /* Optional: Match hover color for phone number */
     text-decoration: none; /* Ensure no underline on hover */
 }
 
+/* Back to Top Button */
 #backToTop {
     display: none; /* Hidden by default */
     position: fixed;
