@@ -152,19 +152,21 @@ nav {
 
 .hero-image img {
     max-width: 100%;
-    height: auto; /* Adjust height to maintain aspect ratio */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    height: 100%; /* Adjust height to match the text container */
+    margin: 0; /* Remove margin */
+    border-radius: 0; /* Remove rounded corners */
+    box-shadow: none; /* Remove box shadow */
 }
 
 .hero-text-container {
-    background-color: #fff;
+    background: linear-gradient(135deg, #fafffb, #bdbdbd); /* Gradient background */
     flex: 1;
     padding: 40px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: none; /* Remove box shadow */
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Vertically center the text */
-    text-align: center; /* Ensure text is centered horizontally */
+    justify-content: center;
+    text-align: center;
     width: 100%; /* Full width */
     max-width: 600px; /* Limit the width of text content */
 }
