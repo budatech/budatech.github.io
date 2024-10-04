@@ -131,11 +131,12 @@ nav {
     background: none; /* Let the gradient background show through */
     padding: 0; /* Remove padding around the section */
     margin: 0; /* Ensure no margin */
-    width: 100vw; /* Full viewport width */
-    height: 100vh; /* Full viewport height */
+    width: 100%; /* Full width of the page */
+    height: 432px; /* Fixed height for desktop */
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 0; /* Remove rounded corners */
 }
 
 .hero-container {
@@ -152,7 +153,6 @@ nav {
 .hero-image img {
     max-width: 100%;
     height: auto; /* Adjust height to maintain aspect ratio */
-    border-radius: 15px 0 0 15px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -161,7 +161,6 @@ nav {
     flex: 1;
     padding: 40px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 0 15px 15px 0;
     display: flex;
     flex-direction: column;
     justify-content: center; /* Vertically center the text */
@@ -303,4 +302,26 @@ footer {
 
 .social-media-icons a:hover {
     color: #0080cc; /* Darker blue on hover */
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+    .hero-section {
+        height: auto; /* Flexible height for mobile */
+        min-height: 300px; /* Set a minimum height for the section */
+    }
+
+    .hero-container {
+        flex-direction: column; /* Stack elements vertically */
+    }
+
+    .hero-image img {
+        width: 100%; /* Make the image full width on mobile */
+        height: auto; /* Keep aspect ratio */
+    }
+
+    .hero-text-container {
+        padding: 20px; /* Smaller padding on mobile */
+        max-width: 100%; /* Allow the text to take full width */
+    }
 }
