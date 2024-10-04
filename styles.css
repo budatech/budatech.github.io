@@ -12,43 +12,49 @@ body {
     min-height: 100vh; /* Ensure body covers full viewport height */
 }
 
+/* Header container */
 header {
-    text-align: center;
-    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0; /* Removed padding to eliminate extra space */
+    background-color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Reintroduced box shadow for the nav */
+    height: 80px; /* Set a fixed height for the menu */
 }
 
 /* Logo styling */
 .logo-container {
-    margin-bottom: 20px;
-    float: left; /* Float logo to the left */
+    margin-left: 20px;
 }
 
 .logo {
-    width: 200px; /* Original size for desktop */
+    width: 150px; /* Adjusted size for logo */
     height: auto;
 }
 
 /* Navigation styling */
 nav {
-    background-color: #333;
-    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    flex-grow: 1;
+    height: 100%; /* Menu takes 100% height of the header */
 }
 
-/* Parallelogram shape for menu items */
+/* Parallelogram menu */
 .nav-links {
     list-style: none;
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    align-items: stretch;
     padding: 0;
+    margin: 0;
+    height: 100%; /* Full height */
 }
 
 .nav-links li {
-    margin-left: 10px;
+    margin: 0 10px;
 }
 
 .nav-links li a {
@@ -56,13 +62,17 @@ nav {
     color: white;
     font-size: 18px;
     font-weight: bold;
-    padding: 15px 30px;
+    padding: 20px 30px; /* Adjust padding to center text in menu items */
     display: block;
     position: relative;
     background-color: #444;
     clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%); /* Parallelogram shape */
     transition: all 0.3s ease;
-    z-index: 1;
+    height: 100%; /* Full height of the nav */
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Hover effect for menu items */
