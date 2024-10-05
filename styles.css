@@ -24,7 +24,6 @@ header {
     text-align: center;
 }
 
-
 /* Logo styling */
 .logo-container {
     flex: 0 1 auto; /* Allow the logo to flex based on its content */
