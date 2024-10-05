@@ -106,30 +106,6 @@ nav {
         margin: 20px auto;
     }
 
-    .nav-links {
-        display: none; /* Hidden by default on mobile */
-        flex-direction: column;
-        align-items: center;
-        background-color: #333;
-        padding: 20px;
-        width: 100%;
-    }
-
-    .nav-links.open {
-        display: flex; /* Show when 'MENU' is clicked */
-    }
-
-    .nav-links li {
-        width: 100%; /* Make menu items take full width */
-    }
-
-    .nav-links li a {
-        clip-path: none; /* Remove parallelogram shape on mobile */
-        padding: 15px;
-        text-align: center;
-        width: 100%; /* Make links take full width */
-    }
-
     .menu-button {
         display: block;
         background-color: #00a0ff;
@@ -140,8 +116,35 @@ nav {
         border-radius: 5px;
         cursor: pointer;
         margin: 10px auto;
-        width: 90%;
+        width: 100%; /* Make the button span the full width */
         text-align: center;
+    }
+
+    /* Ensuring the dropdown collapses downward */
+    .nav-links {
+        display: none; /* Hidden by default on mobile */
+        flex-direction: column;
+        align-items: center;
+        background-color: #333;
+        padding: 20px;
+        width: 100%; /* Dropdown menu should take full width */
+    }
+    
+    .nav-links.open {
+        display: flex; /* Display the menu when open */
+        flex-direction: column; /* Ensure the links are stacked vertically */
+        width: 100%; /* Make the menu take the full width */
+    }
+    
+    .nav-links li {
+        width: 100%; /* Menu items will take up the full width */
+    }
+    
+    .nav-links li a {
+        clip-path: none; /* Remove parallelogram shape on mobile */
+        padding: 15px;
+        text-align: center;
+        width: 100%; /* Make links span full width */
     }
 
     .logo {
