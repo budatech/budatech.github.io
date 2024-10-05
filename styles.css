@@ -15,47 +15,48 @@ body {
 /* Header container */
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Space between logo, menu, and social icons */
     align-items: center;
-    padding: 0 20px;
+    padding: 0 20px; /* Added padding */
     background-color: #333;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     height: 100px;
+    text-align: center;
 }
+
 
 /* Logo styling */
 .logo-container {
-    display: flex;
-    align-items: center;
+    flex: 0 1 auto; /* Allow the logo to flex based on its content */
+    margin-left: 0; /* Ensure no extra left margin */
+    max-height: 80px; /* Set a max height for the logo to prevent it from being cut off */
 }
 
 .logo {
-    width: 120px; /* Adjusted logo size */
-    height: auto;
+    width: auto;
+    height: 80px; /* Make sure the logo fits within the header */
 }
 
 /* Navigation styling */
 nav {
+    flex-grow: 1; /* Allow the nav to take up the space between the logo and social icons */
     display: flex;
-    justify-content: flex-end;
+    justify-content: center; /* Center the menu items */
     align-items: center;
-    flex-grow: 1;
     height: 100%;
 }
 
-/* Menu for desktop */
 .nav-links {
     list-style: none;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center; /* Center the links */
     align-items: center;
     padding: 0;
     margin: 0;
-    height: 100%;
 }
 
 .nav-links li {
-    margin: 0 10px;
+    margin: 0 20px; /* Spacing between the menu items */
 }
 
 .nav-links li a {
@@ -82,9 +83,11 @@ nav {
     box-shadow: 0 0 10px #00a0ff;
 }
 
-/* Social media icons */
+/* Social media icon to the far right */
 .social-media-icons {
-    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
 }
 
 .social-media-icons a {
