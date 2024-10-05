@@ -10,6 +10,8 @@ body {
     background: linear-gradient(135deg, #4f4f4f, #262626); /* Gradient background */
     color: #333;
     min-height: 100vh; /* Ensure body covers full viewport height */
+    padding-top: 120px; /* Add enough space to avoid header being cut off */
+
 }
 
 /* Header container */
@@ -119,6 +121,10 @@ nav {
     header {
         display: block;
         text-align: center;
+    }
+
+    body {
+        padding-top: 100px; /* Adjust for mobile header */
     }
 
     .logo-container {
@@ -269,8 +275,13 @@ nav {
     background-color: #0080cc;
 }
 
+main {
+    min-height: calc(100vh - 200px); /* Ensure content fills at least the height of the viewport minus the header and footer */
+}
+
 /* Footer Styles */
 footer {
+    margin-top: 20px; /* Add margin to push the footer down */
     background-color: #333;
     padding: 20px 0;
     text-align: center;
