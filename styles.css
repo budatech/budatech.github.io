@@ -7,11 +7,9 @@
 
 body {
     font-family: Roboto, sans-serif;
-    background: linear-gradient(135deg, #4f4f4f, #262626); /* Gradient background */
+    background: linear-gradient(135deg, #4f4f4f, #262626); /* Budatech Gradient */
     color: #333;
-    min-height: 100vh; /* Ensure body covers full viewport height */
-    padding-top: 120px; /* Add enough space to avoid header being cut off */
-
+    min-height: 100vh;
 }
 
 /* Header container */
@@ -19,39 +17,38 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0;
+    padding: 0 20px;
     background-color: #333;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Reintroduced box shadow for the nav */
-    height: 100px; /* Increased height for menu */
-    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    height: 100px;
 }
 
 /* Logo styling */
 .logo-container {
-    margin-left: 20px;
-    margin-top: 110px; /* Increased margin to move logo further down */
+    display: flex;
+    align-items: center;
 }
 
 .logo {
-    width: 150px;
+    width: 120px; /* Adjusted logo size */
     height: auto;
 }
 
 /* Navigation styling */
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     flex-grow: 1;
-    height: 100%; /* Menu takes 100% height of the header */
+    height: 100%;
 }
 
-/* Parallelogram menu */
+/* Menu for desktop */
 .nav-links {
     list-style: none;
     display: flex;
     justify-content: flex-end;
-    align-items: stretch;
+    align-items: center;
     padding: 0;
     margin: 0;
     height: 100%;
@@ -69,8 +66,8 @@ nav {
     padding: 20px 30px;
     display: block;
     position: relative;
-    background-color: #333; /* Parallelogram color now matches menu */
-    clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%); /* Parallelogram shape */
+    background-color: #333;
+    clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
     transition: all 0.3s ease;
     height: 100%;
     line-height: 40px;
@@ -79,34 +76,15 @@ nav {
     justify-content: center;
 }
 
-/* Hover effect for menu items */
 .nav-links li a:hover {
     background-color: #222;
     color: #00a0ff;
     box-shadow: 0 0 10px #00a0ff;
 }
 
-.nav-links li a:after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background-color: #00a0ff;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.3s ease;
-}
-
-.nav-links li a:hover:after {
-    transform: scaleX(1);
-    transform-origin: left;
-}
-
-/* Social media styling */
+/* Social media icons */
 .social-media-icons {
-    margin-right: 20px;
+    margin-left: 20px;
 }
 
 .social-media-icons a {
@@ -119,16 +97,13 @@ nav {
 /* Mobile Menu (collapsed by default) */
 @media (max-width: 768px) {
     header {
-        display: block;
+        flex-direction: column;
         text-align: center;
-    }
-
-    body {
-        padding-top: 100px; /* Adjust for mobile header */
+        height: auto;
     }
 
     .logo-container {
-        margin: 20px auto; /* Center the logo */
+        margin: 20px auto;
     }
 
     .nav-links {
@@ -155,7 +130,6 @@ nav {
         width: 100%; /* Make links take full width */
     }
 
-    /* Style the entire box that will show 'MENU' */
     .menu-button {
         display: block;
         background-color: #00a0ff;
@@ -168,6 +142,10 @@ nav {
         margin: 10px auto;
         width: 90%;
         text-align: center;
+    }
+
+    .logo {
+        width: 100px; /* Smaller logo size for mobile */
     }
 }
 
@@ -185,10 +163,8 @@ nav {
 /* Hero Section */
 .hero-section {
     background: none;
-    padding: 0;
-    margin: 0;
+    padding: 50px 0 20px 0;
     width: 100%;
-    height: 432px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -201,7 +177,6 @@ nav {
     align-items: stretch;
     justify-content: space-between;
     width: 100%;
-    height: 100%;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -209,22 +184,20 @@ nav {
 .hero-image img {
     max-width: 100%;
     height: 100%;
-    margin: 0;
-    border-radius: 0;
-    box-shadow: none;
+    border-radius: 15px 0 0 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .hero-text-container {
-    background: linear-gradient(135deg, #fafffb, #bdbdbd);
+    background-color: #fff;
     flex: 1;
     padding: 40px;
-    box-shadow: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0 15px 15px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    width: 100%;
-    max-width: 600px;
 }
 
 .hero-text h1,
@@ -253,40 +226,12 @@ nav {
     margin-bottom: 25px;
 }
 
-/* Button Styling */
-.cta-button,
-.send-button {
-    display: inline-block;
-    background-color: #00a0ff;
-    color: #fff;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 25px;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
-    text-align: center;
-    border: none;
-}
-
-.cta-button:hover,
-.send-button:hover {
-    background-color: #0080cc;
-}
-
-main {
-    min-height: calc(100vh - 200px); /* Ensure content fills at least the height of the viewport minus the header and footer */
-}
-
-/* Footer Styles */
+/* Footer */
 footer {
-    margin-top: 20px; /* Add margin to push the footer down */
     background-color: #333;
     padding: 20px 0;
     text-align: center;
     width: 100%;
-    border-top: 1px solid #ddd; /* Add top border to visually separate the footer */
 }
 
 .footer-container {
@@ -294,7 +239,6 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
 }
 
 .footer-nav {
@@ -302,133 +246,77 @@ footer {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center; /* Center align footer nav */
-    flex-wrap: wrap; /* Allow it to wrap on smaller screens */
+    justify-content: space-around;
+    width: 100%;
 }
 
 .footer-nav li {
-    margin: 10px 15px; /* Adjust margins to space items evenly */
+    margin: 0 20px;
+    position: relative;
 }
 
 .footer-nav li a {
     text-decoration: none;
     color: #fff;
-    font-weight: bold;
     font-size: 18px;
-    padding: 10px 0;
+    font-weight: bold;
+    padding: 10px 20px;
     display: inline-block;
     position: relative;
 }
 
+.footer-nav li a:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0%;
+    height: 3px;
+    background-color: #00a0ff;
+    box-shadow: 0 0 10px #00a0ff, 0 0 20px #00a0ff;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.footer-nav li a:hover:after {
+    width: 100%;
+    left: 0;
+}
+
 .footer-nav li a:hover {
-    color: #00a0ff; /* Matching hover color */
+    color: #00a0ff;
 }
 
 .footer-info {
     margin-top: 15px;
     color: #666;
-    text-align: center;
 }
 
 .footer-info p {
     margin: 5px 0;
-    color: #999; /* Slightly lighter text for the info */
 }
 
 .footer-info a {
-    color: inherit; /* Match the text color of the parent */
+    color: inherit;
     text-decoration: none;
 }
 
 .footer-info a:hover {
-    color: #00a0ff; /* Matching hover color for info links */
-    text-decoration: none; /* No underline */
-}
-
-/* Social Media Icons */
-.social-media-icons {
-    display: flex;
-    justify-content: center;
-    margin: 10px 0;
-}
-
-.social-media-icons a {
-    margin: 0 10px;
-    color: #00a0ff; /* Icon color */
-    font-size: 24px;
+    color: #00a0ff;
     text-decoration: none;
 }
 
-.social-media-icons a:hover {
-    color: #0080cc; /* Slightly darker on hover */
-}
-
-/* Back to Top Button */
-#backToTop {
-    display: none; /* Hidden by default */
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 99;
-    font-size: 18px;
-    border: none;
-    outline: none;
-    background-color: #00a0ff;
-    color: white;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 50%;
-}
-
-#backToTop:hover {
-    background-color: #0080cc;
-}
-
-/* Footer Mobile Responsiveness */
+/* Mobile Footer (Responsive) */
 @media (max-width: 768px) {
-    .hero-section {
-        height: auto;
-        min-height: 300px;
-    }
-
-    .hero-container {
-        flex-direction: column;
-    }
-
-    .hero-image img {
-        width: 100%;
-        height: auto;
-    }
-
-    .hero-text-container {
-        padding: 20px;
-        max-width: 100%;
-    }
-
-    .nav-links {
-        flex-direction: column;
-    }
-
-    .nav-links li a {
-        clip-path: none;
-        padding: 15px;
-        text-align: center;
-    }
-
-    .footer-container {
-        padding: 15px; /* Adjust padding for smaller screens */
-    }
-
     .footer-nav {
-        flex-direction: column; /* Stack the footer links vertically */
+        flex-direction: column;
         align-items: center;
     }
 
     .footer-nav li {
-        margin: 10px 0; /* Add more vertical spacing between links */
+        margin: 10px 0;
     }
 
-    .social-media-icons {
-        margin: 15px 0;
+    footer {
+        padding: 20px 10px;
     }
 }
