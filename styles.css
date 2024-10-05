@@ -26,7 +26,7 @@ header {
 /* Logo styling */
 .logo-container {
     margin-left: 20px;
-    margin-top: 10px; /* Adjusted margin to fit desktop */
+    margin-top: 20px; /* Adjusted margin to move logo further down */
 }
 
 .logo {
@@ -34,10 +34,22 @@ header {
     height: auto;
 }
 
+/* Navigation styling for mobile button */
+.menu-button {
+    display: none;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
 /* Navigation styling */
 nav {
     display: flex;
-    justify-content: center; /* Center menu items on desktop */
+    justify-content: space-between;
     align-items: center;
     flex-grow: 1;
     height: 100%; /* Menu takes 100% height of the header */
@@ -47,7 +59,7 @@ nav {
 .nav-links {
     list-style: none;
     display: flex;
-    justify-content: center; /* Center menu items on desktop */
+    justify-content: flex-end;
     align-items: stretch;
     padding: 0;
     margin: 0;
@@ -306,34 +318,22 @@ footer {
         max-width: 100%;
     }
 
+    .menu-button {
+        display: block; /* Show menu button on mobile */
+    }
+
     .nav-links {
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        display: none; /* Hidden until button clicked */
+        display: none; /* Hide the menu by default on mobile */
     }
 
     .nav-links.open {
-        display: flex; /* Display when the menu is clicked */
-    }
-
-    .nav-links li {
-        margin: 10px 0;
+        display: block; /* Show the menu when 'MENU' is clicked */
     }
 
     .nav-links li a {
         clip-path: none;
         padding: 15px;
         text-align: center;
-    }
-
-    .menu-button {
-        font-size: 20px;
-        color: white;
-        padding: 15px;
-        background-color: #333;
-        text-align: center;
-        cursor: pointer;
-        display: block;
     }
 }
