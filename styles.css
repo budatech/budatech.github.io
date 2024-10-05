@@ -100,15 +100,15 @@ nav {
 /* Mobile Menu (collapsed by default) */
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
+        display: block;
         text-align: center;
-        height: auto;
     }
 
     .logo-container {
         margin: 20px auto;
     }
 
+    /* Menu button should take full width */
     .menu-button {
         display: block;
         background-color: #00a0ff;
@@ -119,35 +119,36 @@ nav {
         border-radius: 5px;
         cursor: pointer;
         margin: 10px auto;
-        width: 100%; /* Make the button span the full width */
+        width: 100%; /* Full width of the screen */
         text-align: center;
     }
 
-    /* Ensuring the dropdown collapses downward */
+    /* Ensure nav-links are hidden by default on mobile */
     .nav-links {
-        display: none; /* Hidden by default on mobile */
+        display: none; /* Hidden by default */
         flex-direction: column;
         align-items: center;
         background-color: #333;
-        padding: 20px;
-        width: 100%; /* Dropdown menu should take full width */
+        padding: 20px 0; /* Add vertical padding to the menu */
+        width: 100%; /* Ensure menu takes full width */
     }
-    
+
+    /* Menu drops down when opened */
     .nav-links.open {
-        display: flex; /* Display the menu when open */
-        flex-direction: column; /* Ensure the links are stacked vertically */
-        width: 100%; /* Make the menu take the full width */
+        display: flex; /* Show when 'MENU' is clicked */
     }
-    
+
     .nav-links li {
-        width: 100%; /* Menu items will take up the full width */
+        width: 100%; /* Full width of the menu */
     }
-    
+
     .nav-links li a {
-        clip-path: none; /* Remove parallelogram shape on mobile */
         padding: 15px;
         text-align: center;
-        width: 100%; /* Make links span full width */
+        width: 100%; /* Make links take full width */
+        background-color: #333; /* Same background as menu */
+        color: white;
+        display: block;
     }
 
     .logo {
