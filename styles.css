@@ -275,6 +275,7 @@ footer {
     padding: 20px 0;
     text-align: center;
     width: 100%;
+    border-top: 1px solid #ddd; /* Add top border to visually separate the footer */
 }
 
 .footer-container {
@@ -282,6 +283,7 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 20px;
 }
 
 .footer-nav {
@@ -289,66 +291,89 @@ footer {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: space-around;
-    width: 100%;
+    justify-content: center; /* Center align footer nav */
+    flex-wrap: wrap; /* Allow it to wrap on smaller screens */
 }
 
 .footer-nav li {
-    margin: 0 20px;
-    position: relative;
+    margin: 10px 15px; /* Adjust margins to space items evenly */
 }
 
 .footer-nav li a {
     text-decoration: none;
     color: #fff;
-    font-size: 18px;
     font-weight: bold;
-    padding: 10px 20px;
+    font-size: 18px;
+    padding: 10px 0;
     display: inline-block;
     position: relative;
 }
 
-.footer-nav li a:after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: -5px;
-    width: 0%;
-    height: 3px;
-    background-color: #00a0ff;
-    box-shadow: 0 0 10px #00a0ff, 0 0 20px #00a0ff;
-    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
-}
-
-.footer-nav li a:hover:after {
-    width: 100%;
-    left: 0;
-}
-
 .footer-nav li a:hover {
-    color: #00a0ff;
+    color: #00a0ff; /* Matching hover color */
 }
 
 .footer-info {
     margin-top: 15px;
     color: #666;
+    text-align: center;
 }
 
 .footer-info p {
     margin: 5px 0;
+    color: #999; /* Slightly lighter text for the info */
 }
 
 .footer-info a {
-    color: inherit;
+    color: inherit; /* Match the text color of the parent */
     text-decoration: none;
 }
 
 .footer-info a:hover {
-    color: #00a0ff;
+    color: #00a0ff; /* Matching hover color for info links */
+    text-decoration: none; /* No underline */
+}
+
+/* Social Media Icons */
+.social-media-icons {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.social-media-icons a {
+    margin: 0 10px;
+    color: #00a0ff; /* Icon color */
+    font-size: 24px;
     text-decoration: none;
 }
 
-/* Responsive Styles for Mobile */
+.social-media-icons a:hover {
+    color: #0080cc; /* Slightly darker on hover */
+}
+
+/* Back to Top Button */
+#backToTop {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #00a0ff;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+#backToTop:hover {
+    background-color: #0080cc;
+}
+
+/* Footer Mobile Responsiveness */
 @media (max-width: 768px) {
     .hero-section {
         height: auto;
@@ -377,5 +402,22 @@ footer {
         clip-path: none;
         padding: 15px;
         text-align: center;
+    }
+
+    .footer-container {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    .footer-nav {
+        flex-direction: column; /* Stack the footer links vertically */
+        align-items: center;
+    }
+
+    .footer-nav li {
+        margin: 10px 0; /* Add more vertical spacing between links */
+    }
+
+    .social-media-icons {
+        margin: 15px 0;
     }
 }
