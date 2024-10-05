@@ -99,13 +99,16 @@ nav {
 
 /* Mobile Menu (collapsed by default) */
 @media (max-width: 768px) {
-    header {
-        display: block;
+    /* Align the logo at the top */
+    .logo-container {
+        margin: 0 auto;
         text-align: center;
     }
 
-    .logo-container {
-        margin: 20px auto;
+    /* Smaller logo size for mobile */
+    .logo {
+        width: 150px; /* Adjusted to smaller size for mobile */
+        height: auto;
     }
 
     /* Menu button should take full width */
@@ -129,7 +132,7 @@ nav {
         flex-direction: column;
         align-items: center;
         background-color: #333;
-        padding: 20px 0; /* Add vertical padding to the menu */
+        padding: 10px 0;
         width: 100%; /* Ensure menu takes full width */
     }
 
@@ -146,13 +149,21 @@ nav {
         padding: 15px;
         text-align: center;
         width: 100%; /* Make links take full width */
-        background-color: #333; /* Same background as menu */
+        background-color: #333;
         color: white;
         display: block;
     }
 
-    .logo {
-        width: 100px; /* Smaller logo size for mobile */
+    /* Social media icon centered */
+    .social-media-icons {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .social-media-icons a {
+        margin: 0 10px;
+        color: #00a0ff;
+        font-size: 24px;
     }
 }
 
