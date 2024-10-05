@@ -21,29 +21,18 @@ header {
     background-color: #333;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Reintroduced box shadow for the nav */
     height: 100px; /* Increased height for menu */
+    text-align: center;
 }
 
 /* Logo styling */
 .logo-container {
     margin-left: 20px;
-    margin-top: 20px; /* Adjusted margin to move logo further down */
+    margin-top: 110px; /* Increased margin to move logo further down */
 }
 
 .logo {
     width: 150px;
     height: auto;
-}
-
-/* Navigation styling for mobile button */
-.menu-button {
-    display: none;
-    font-size: 24px;
-    font-weight: bold;
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
 }
 
 /* Navigation styling */
@@ -123,6 +112,68 @@ nav {
     font-size: 24px;
     margin-left: 10px;
     text-decoration: none;
+}
+
+/* Mobile Menu (collapsed by default) */
+@media (max-width: 768px) {
+    header {
+        display: block;
+        text-align: center;
+    }
+
+    .logo-container {
+        margin: 20px auto; /* Center the logo */
+    }
+
+    .nav-links {
+        display: none; /* Hidden by default on mobile */
+        flex-direction: column;
+        align-items: center;
+        background-color: #333;
+        padding: 20px;
+        width: 100%;
+    }
+
+    .nav-links.open {
+        display: flex; /* Show when 'MENU' is clicked */
+    }
+
+    .nav-links li {
+        width: 100%; /* Make menu items take full width */
+    }
+
+    .nav-links li a {
+        clip-path: none; /* Remove parallelogram shape on mobile */
+        padding: 15px;
+        text-align: center;
+        width: 100%; /* Make links take full width */
+    }
+
+    /* Style the entire box that will show 'MENU' */
+    .menu-button {
+        display: block;
+        background-color: #00a0ff;
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 10px auto;
+        width: 90%;
+        text-align: center;
+    }
+}
+
+/* Desktop Layout remains unchanged */
+@media (min-width: 769px) {
+    .menu-button {
+        display: none; /* Hide the "MENU" button on desktop */
+    }
+
+    .nav-links {
+        display: flex; /* Show the menu normally on desktop */
+    }
 }
 
 /* Hero Section */
@@ -318,17 +369,8 @@ footer {
         max-width: 100%;
     }
 
-    .menu-button {
-        display: block; /* Show menu button on mobile */
-    }
-
     .nav-links {
         flex-direction: column;
-        display: none; /* Hide the menu by default on mobile */
-    }
-
-    .nav-links.open {
-        display: block; /* Show the menu when 'MENU' is clicked */
     }
 
     .nav-links li a {
