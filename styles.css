@@ -12,13 +12,10 @@ body {
     min-height: 100vh;
 }
 
-/* Header container */
 header {
-    background-color: #1b1a1a; /* Dark background for header */
     text-align: center;
     padding: 20px 0;
-    position: relative;
-    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.6); /* Box shadow under header */
+    background-color: #1b1a1a; /* Background color for the entire header */
 }
 
 /* Logo styling */
@@ -33,14 +30,14 @@ header {
 
 /* Navigation styling for desktop */
 nav {
-    background-color: #1b1a1a; /* Dark background for nav */
-    padding: 10px 20px;
-    border-radius: 0; /* Remove rounded corners */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    background-color: #1b1a1a; /* Dark background to match header */
+    padding: 10px 0;
     margin: 0 auto;
-    width: fit-content;
-    cursor: pointer; /* Entire white box is clickable */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Box shadow around the menu */
+    display: flex;
+    justify-content: center;
     position: relative;
+    clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%); /* Parallelogram shape */
 }
 
 .nav-links {
@@ -58,50 +55,38 @@ nav {
 
 .nav-links li a {
     text-decoration: none;
-    color: white; /* White text for menu items */
+    color: white;
     font-size: 18px;
     font-weight: bold;
-    padding: 5px 0;
+    padding: 10px 20px;
     display: inline-block;
     position: relative;
-    background-color: #1b1a1a;
-    clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%); /* Parallelogram shape */
     transition: all 0.3s ease;
 }
 
-/* Hover effect for navigation */
 .nav-links li a::after {
     content: "";
     position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0%;
+    left: 50%;
+    bottom: -5px;
+    width: 0;
     height: 3px;
-    background-color: #00a0ff; /* Blue underline on hover */
-    transition: width 0.3s ease-in-out;
+    background-color: #00a0ff;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
 }
 
 .nav-links li a:hover::after {
-    width: 100%;
+    width: 100%; /* Grow the underline on hover */
 }
 
 .nav-links li a:hover {
-    color: #00a0ff; /* Blue text on hover */
+    color: #00a0ff; /* Text color change on hover */
 }
 
-/* Social media icon to the far right */
-.social-media-icons {
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-}
-
-.social-media-icons a {
-    color: #00a0ff;
-    font-size: 24px;
-    margin-left: 10px;
-    text-decoration: none;
+.nav-links li a:hover {
+    background-color: #222; /* Hover background color */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Box shadow on hover */
 }
 
 /* Mobile Menu (collapsed by default) */
