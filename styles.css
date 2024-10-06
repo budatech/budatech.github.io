@@ -226,7 +226,7 @@ nav {
 .hero-text h3,
 .hero-text p {
     margin: 0 auto;
-    color: white; /* White text */
+    color: black; /* black text */
 }
 
 /* Update for h1 color */
