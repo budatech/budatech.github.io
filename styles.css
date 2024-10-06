@@ -19,6 +19,24 @@ header {
     background-color: #282828; /* Background color for the entire header */
 }
 
+/* Social media icon styling */
+.social-media-icons {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.social-media-icons a {
+    margin: 0 10px;
+    font-size: 24px; /* Change this to adjust the icon size */
+    color: #ffffff; /* White color for the icon */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-media-icons a:hover {
+    color: #06a0ff; /* Change the color on hover */
+}
+
 /* Logo styling */
 .logo-container {
     margin-bottom: 20px;
@@ -154,6 +172,15 @@ nav {
     .nav-links {
         display: flex; /* Show the menu normally on desktop */
     }
+
+    .social-media-icons {
+        text-align: center; /* Or any other positioning you prefer */
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+}
+    
 }
 
 /* Hero Section */
