@@ -11,8 +11,8 @@ html, body {
 
 body {
     font-family: Roboto, sans-serif;
-    background: url('bg.png') no-repeat center center fixed; /* Use bg.png as background */
-    background-size: cover;
+    /* background: url('bg.png') no-repeat center center fixed; Use bg.png as background */
+    /* background-size: cover; /*
     color: #282828;
     min-height: 100vh; /* Ensure body covers full viewport height */
     display: flex;
