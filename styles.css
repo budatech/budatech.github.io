@@ -469,11 +469,13 @@ input[type="text"],
 input[type="email"],
 input[type="tel"],
 textarea {
-    width: 100%;
-    padding: 10px;
+    font-family: inherit; /* Ensures the font family matches */
+    font-size: inherit; /* Ensures the font size is consistent */
+    padding: 10px; /* Matching padding for both inputs and textarea */
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box; /* Ensures consistent sizing */
 }
 
 textarea {
