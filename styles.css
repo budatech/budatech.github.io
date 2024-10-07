@@ -130,6 +130,9 @@ nav {
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     }
 
+   .hero-widget-container {
+        width: 100%; /* Make it full width on smaller screens */
+    }
     .nav-links.open {
         display: flex; /* Show when 'MENU' is clicked */
     }
@@ -498,4 +501,15 @@ textarea {
 
 .send-button:hover {
     background-color: #009ed6; /* Slightly darker blue on hover */
+}
+
+.hero-widget-container {
+    background-color: white; /* Background color for the widget container */
+    padding: 20px; /* Add some padding for the widget content */
+    border-radius: 15px; /* Rounded corners on both sides */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    margin-top: 20px; /* Add some space between the text and the widget */
+    max-width: 600px; /* Optional: Set a max width to match the layout */
+    margin-left: auto; /* Center the container horizontally */
+    margin-right: auto;
 }
