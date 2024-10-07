@@ -404,14 +404,14 @@ footer {
 }
 
 .email-link {
-    color: #f3aa4c; /* Use the yellow color used elsewhere */
+    color: #00baff; /* Use the blue color used elsewhere */
     text-decoration: none; /* Remove underline */
     font-weight: bold; /* Make it bold to match the style */
 }
 
 .email-link:hover {
     text-decoration: none; /* Ensure no underline on hover */
-    color: #ef602c; /* Optional: change to a hover color */
+    color: #009ed6; /* Optional: change to a hover color */
 }
 
 .map-section {
@@ -438,7 +438,7 @@ iframe {
 }
 
 .address-section h3 {
-    color: #f3aa4c;
+    color: #00baff;
     font-size: 24px;
     margin-bottom: 10px;
 }
