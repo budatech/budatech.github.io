@@ -120,6 +120,32 @@ nav {
 
 /* Mobile Menu (collapsed by default) */
 @media (max-width: 768px) {
+    
+    .services-section {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .services-section.reverse {
+        flex-direction: column;
+    }
+
+    .services-image {
+        width: 100%;
+        height: auto; /* Allow the image to adjust its height */
+        border-radius: 15px 15px 0 0; /* Rounded corners on the top */
+    }
+
+    .services-text-container {
+        width: 100%;
+        padding: 20px;
+        border-radius: 0 0 15px 15px; /* Rounded corners on the bottom */
+    }
+
+    .services-section.reverse .services-text-container {
+        border-radius: 0 0 15px 15px; /* Rounded corners on the bottom for reverse layout */
+    }
+    
     .nav-links {
         display: none; /* Hidden by default on mobile */
         flex-direction: column;
@@ -537,4 +563,65 @@ textarea {
 /* Center the button */
 .hero-text {
     text-align: center; /* Ensure everything in hero-text is centered */
+}
+
+.services-section {
+    display: flex;
+    align-items: stretch;
+    margin: 40px auto;
+    max-width: 1200px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.services-section .services-image {
+    flex: 1;
+}
+
+.services-section .services-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px 0 0 15px; /* Rounded corners on the left */
+}
+
+.services-section .services-text-container {
+    flex: 1;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 0 15px 15px 0; /* Rounded corners on the right */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.services-section h3 {
+    color: #fa534b;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.services-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.services-section ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Reverse the layout for sections with the 'reverse' class */
+.services-section.reverse {
+    flex-direction: row-reverse;
+}
+
+.services-section.reverse .services-image img {
+    border-radius: 0 15px 15px 0; /* Rounded corners on the right */
+}
+
+.services-section.reverse .services-text-container {
+    border-radius: 15px 0 0 15px; /* Rounded corners on the left */
 }
