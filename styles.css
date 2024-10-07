@@ -11,7 +11,7 @@ html, body {
 
 body {
     font-family: Roboto, sans-serif;
-    background: url('seamless1.png') repeat; /* Use seamless1.png as background */
+    background: url('seamlessbg.png') repeat; /* Use seamless1.png as background */
     background-position: center center; /* Position the image in the center */
     background-size: auto; /* Ensure the image uses its natural size */
     color: #282828;
