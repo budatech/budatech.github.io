@@ -640,3 +640,8 @@ textarea {
     height: 100%;
     object-fit: cover; /* Ensures image fills container without distortion */
 }
+
+/* Target H3 headings in non-reversed sections */
+.services-section:not(.reverse) .services-text-container h3 {
+    color: #27bbff; /* Set the color to #27bbff */
+}
