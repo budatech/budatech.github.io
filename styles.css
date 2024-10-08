@@ -122,7 +122,6 @@ nav {
 
 /* Mobile Menu (collapsed by default) */
 @media (max-width: 768px) {
-    
     .services-section {
         flex-direction: column;
         max-width: 100%;
@@ -415,8 +414,11 @@ footer {
 
 /* Contact form styling */
 .contact-section {
-    text-align: left;
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    gap: 20px; /* Add space between the form and the map */
     padding: 20px;
+    flex-wrap: wrap;
 }
 
 .contact-form h2 {
@@ -425,13 +427,30 @@ footer {
     margin-bottom: 20px; /* Add some space below the heading */
 }
 
-.contact-form {
+/* Adjusting width for both contact form and map */
+.contact-form, .map-section {
+    max-width: 450px; /* Limit width for both sections */
+    width: 100%;
+    flex: 1 1 450px; /* Allow both to flex equally */
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
-    max-width: 600px;
-    margin: 20px auto;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensures the iframe in the map matches the height of the form */
+iframe {
+    width: 100%;
+    height: 450px; /* Adjust to match contact form height */
+    border: none;
+    border-radius: 10px;
+}
+
+/* Stack them on mobile */
+@media (max-width: 768px) {
+    .contact-form, .map-section {
+        width: 100%; /* Full width on mobile */
+    }
 }
 
 .email-link {
@@ -443,22 +462,6 @@ footer {
 .email-link:hover {
     text-decoration: none; /* Ensure no underline on hover */
     color: #009ed6; /* Optional: change to a hover color */
-}
-
-.map-section {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 600px;
-    margin: 20px auto;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-iframe {
-    width: 100%;
-    height: 350px;
-    border: none;
-    border-radius: 10px;
 }
 
 .address-section {
