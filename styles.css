@@ -142,6 +142,9 @@ nav {
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     }
 
+    .hero-widget-container {
+        width: 100%;
+    }
     .nav-links.open {
         display: flex;
     }
@@ -200,9 +203,10 @@ nav {
     text-align: left;
     padding: 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Center the form and map */
     align-items: flex-start;
     flex-wrap: wrap;
+    gap: 20px; /* Add a small gap between the form and map */
 }
 
 .contact-form h2 {
@@ -215,22 +219,17 @@ nav {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
-    width: 48%;
+    width: 48%; /* Each takes up half of the space on larger screens */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     height: auto;
+    min-height: 450px; /* Adjust height based on contact form */
 }
 
 .map-section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: auto; /* Adjust based on the contact form */
-}
-
-/* Force equal height for both sections */
-.contact-form, .map-section {
-    min-height: 450px; /* Adjust height based on contact form */
 }
 
 @media (max-width: 768px) {
@@ -414,6 +413,8 @@ textarea {
     border-radius: 15px 0 0 15px;
 }
 
+/* Removing Google widget branding */
 a[href*="elfsight.com/google-reviews-widget"] {
     display: none !important;
 }
+
