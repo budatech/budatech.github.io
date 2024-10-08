@@ -128,31 +128,32 @@
             </div>
         </div>
     </footer>
-
+    
     <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        // Function to target the Elfsight branding link and hide it
-        function removeElfsightBranding() {
-            var elfsightLink = document.querySelector('a[href*="elfsight.com/google-reviews-widget"]');
-            if (elfsightLink) {
-                // Modify the display style directly to hide it
-                elfsightLink.style.display = 'none';
+        document.addEventListener("DOMContentLoaded", function() {
+            // Function to target the Elfsight branding link and hide it
+            function removeElfsightBranding() {
+                var elfsightLink = document.querySelector('a[href*="elfsight.com/google-reviews-widget"]');
+                if (elfsightLink) {
+                    // Hide the branding link by setting display to none
+                    elfsightLink.style.display = 'none';
+                }
             }
-        }
-
-        // Run the function initially to remove the element if already present
-        removeElfsightBranding();
-
-        // Use MutationObserver to detect if the widget re-adds the branding after loading
-        var observer = new MutationObserver(function(mutations) {
-            mutations.forEach(function(mutation) {
+    
+            // Initial check when the DOM content is loaded
+            removeElfsightBranding();
+    
+            // Use MutationObserver to detect when elements are added to the DOM
+            var observer = new MutationObserver(function() {
                 removeElfsightBranding();
             });
+    
+            // Start observing the body for changes
+            observer.observe(document.body, { childList: true, subtree: true });
+    
+            // Set an interval to check every second to catch dynamic loads
+            setInterval(removeElfsightBranding, 1000);
         });
-
-        // Start observing the body for any changes
-        observer.observe(document.body, { childList: true, subtree: true });
-    });
     </script>
     
 </body>
