@@ -29,6 +29,7 @@ header {
     padding: 20px 0;
     background-color: #282828; /* Background color for the entire header */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Add a box-shadow at the bottom */
+
 }
 
 /* Social media icon styling */
@@ -121,6 +122,7 @@ nav {
 
 /* Mobile Menu (collapsed by default) */
 @media (max-width: 768px) {
+    
     .services-section {
         flex-direction: column;
         max-width: 100%;
@@ -145,7 +147,7 @@ nav {
     .services-section.reverse .services-text-container {
         border-radius: 0 0 15px 15px; /* Rounded corners on the bottom for reverse layout */
     }
-
+    
     .nav-links {
         display: none; /* Hidden by default on mobile */
         flex-direction: column;
@@ -156,7 +158,7 @@ nav {
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     }
 
-    .hero-widget-container {
+   .hero-widget-container {
         width: 100%; /* Make it full width on smaller screens */
     }
     .nav-links.open {
@@ -218,45 +220,205 @@ nav {
     }
 }
 
-/* Contact Form and Map Section */
-.contact-section {
+/* Hero Section */
+.hero-section {
+    background: none;
+    padding: 50px 0 20px 0;
+}
+
+.hero-container {
     display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
     justify-content: space-between;
-    padding: 20px;
-    gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.contact-form,
-.map-section {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
+.hero-image img {
+    max-width: 100%;
+    height: 100%;
+    border-radius: 15px 0 0 15px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Updated hero-text-container */
+.hero-text-container {
+    background-color: rgba(255, 255, 255); /* Black background with 50% opacity */
     flex: 1;
+    padding: 40px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0 15px 15px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
 
-.contact-form {
-    margin-right: 20px;
+.hero-text h3,
+.hero-text p {
+    margin: 0 auto;
+    color: black; /* black text */
 }
 
-.map-section {
-    margin-left: 20px;
+/* Update for h1 color */
+.hero-text h1 {
+    margin: 0 auto;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #00baff; /* Updated color */
 }
 
+.hero-text h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.hero-text p {
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+/* Footer */
+footer {
+    background-color: #282828;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.5); /* Box shadow for footer */
+    margin-top: auto; /* Push the footer to the bottom */
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.footer-nav li {
+    margin: 0 20px;
+    position: relative;
+}
+
+.footer-nav li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    display: inline-block;
+    position: relative;
+}
+
+.footer-nav li a:hover {
+    color: #00a0ff;
+}
+
+.footer-info {
+    margin-top: 15px;
+    color: #666;
+}
+
+.footer-info p {
+    margin: 5px 0;
+}
+
+.footer-info a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer-info a:hover {
+    color: #00a0ff;
+    text-decoration: none;
+}
+
+/* Mobile Footer (Responsive) */
 @media (max-width: 768px) {
-    .contact-section {
+    .footer-nav {
         flex-direction: column;
+        align-items: center;
     }
 
-    .contact-form,
-    .map-section {
-        margin: 0;
+    .footer-nav li {
+        margin: 10px 0;
     }
+
+    footer {
+        padding: 20px 10px;
+    }
+}
+
+/* Contact form specific adjustments */
+.send-button {
+    width: 100%;
+    border-radius: 25px;
+}
+
+/* Schedule Calendar styling */
+#schedule-section {
+    text-align: center;
+    padding: 20px;
+}
+
+#back-to-home {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #2890df;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#back-to-home:hover {
+    background-color: #47cee6;
+}
+
+/* Contact form specific adjustments */
+.send-button {
+    width: 100%;
+    border-radius: 25px;
+}
+
+/* Schedule Calendar styling */
+#schedule-section {
+    text-align: center;
+    padding: 20px;
+}
+
+#back-to-home {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #2890df;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#back-to-home:hover {
+    background-color: #47cee6;
 }
 
 /* Contact form styling */
+.contact-section {
+    text-align: left;
+    padding: 20px;
+}
+
 .contact-form h2 {
     text-align: center; /* Center the heading */
     color: #333; /* Existing color */
@@ -264,7 +426,12 @@ nav {
 }
 
 .contact-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
     max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .email-link {
@@ -278,7 +445,16 @@ nav {
     color: #009ed6; /* Optional: change to a hover color */
 }
 
-.map-section iframe {
+.map-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+iframe {
     width: 100%;
     height: 350px;
     border: none;
@@ -353,4 +529,130 @@ textarea {
 
 .send-button:hover {
     background-color: #009ed6; /* Slightly darker blue on hover */
+}
+
+.hero-widget-container {
+    background-color: white; /* Background color for the widget container */
+    padding: 20px; /* Add some padding for the widget content */
+    border-radius: 15px; /* Rounded corners on both sides */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    margin-top: 20px; /* Add some space between the text and the widget */
+    max-width: 1200px; /* Optional: Set a max width to match the layout */
+    margin-left: auto; /* Center the container horizontally */
+    margin-right: auto;
+}
+
+/* Button styling */
+.hero-button {
+    display: inline-block;
+    background-color: #fa534b; /* Button color */
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover state for the button */
+.hero-button:hover {
+    background-color: #d1261e; /* Hover color */
+}
+
+/* Center the button */
+.hero-text {
+    text-align: center; /* Ensure everything in hero-text is centered */
+}
+
+.services-section {
+    display: flex;
+    align-items: stretch;
+    margin: 40px auto;
+    max-width: 1200px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.services-section .services-image {
+    flex: 1;
+}
+
+.services-section .services-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px 0 0 15px; /* Rounded corners on the left */
+}
+
+.services-section .services-text-container {
+    flex: 1;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 0 15px 15px 0; /* Rounded corners on the right */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.services-section h3 {
+    color: #fa534b;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.services-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.services-section ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Reverse the layout for sections with the 'reverse' class */
+.services-section.reverse {
+    flex-direction: row-reverse;
+}
+
+.services-section.reverse .services-image img {
+    border-radius: 0 15px 15px 0; /* Rounded corners on the right */
+}
+
+.services-section.reverse .services-text-container {
+    border-radius: 15px 0 0 15px; /* Rounded corners on the left */
+}
+
+.services-image {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.services-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image fills container without distortion */
+}
+
+/* Target H3 headings in non-reversed sections */
+.services-section:not(.reverse) .services-text-container h3 {
+    color: #27bbff; /* Set the color to #27bbff */
+}
+
+a[href*="elfsight.com/google-reviews-widget"] {
+    display: none !important;
+}
+
+.elfsight-app-63341106-d96a-4a08-a569-90e41a639459 a[href*="elfsight.com/google-reviews-widget"],
+.elfsight-app-63341106-d96a-4a08-a569-90e41a639459 a[href*="elfsight.com/google-reviews-widget"] svg {
+    display: none !important;
 }
