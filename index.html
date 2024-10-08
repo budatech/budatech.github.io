@@ -130,12 +130,28 @@
     </footer>
 
     <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        var elfsightLink = document.querySelector('a[href*="elfsight.com/google-reviews-widget"]');
-        if (elfsightLink) {
-            elfsightLink.remove();
-        }
-    });
+        document.addEventListener("DOMContentLoaded", function() {
+            // Function to remove the Elfsight branding link
+            function removeElfsightBranding() {
+                var elfsightLink = document.querySelector('a[href*="elfsight.com/google-reviews-widget"]');
+                if (elfsightLink) {
+                    elfsightLink.remove();
+                }
+            }
+    
+            // Run the function initially in case the element is already present
+            removeElfsightBranding();
+    
+            // Set up a MutationObserver to monitor DOM changes and remove the link if it's added dynamically
+            var observer = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                    removeElfsightBranding();
+                });
+            });
+    
+            // Observe changes in the document's body
+            observer.observe(document.body, { childList: true, subtree: true });
+        });
     </script>
     
 </body>
