@@ -72,6 +72,12 @@
 
     <script src="https://static.elfsight.com/platform/platform.js" async></script>
 
+    <style>
+        a[href*="elfsight.com/google-reviews-widget"] {
+            display: none !important;
+        }
+    </style>
+    
 </head>
 <body>
 
@@ -128,31 +134,5 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Function to remove only the Elfsight branding link
-            function removeElfsightBranding() {
-                var elfsightLink = document.querySelector('a[href*="elfsight.com/google-reviews-widget"]');
-                if (elfsightLink) {
-                    elfsightLink.remove(); // Remove the branding link only
-                }
-            }
-    
-            // Run the function initially in case the element is already present
-            removeElfsightBranding();
-    
-            // Set up a MutationObserver to monitor DOM changes and remove the link if it's added dynamically
-            var observer = new MutationObserver(function(mutations) {
-                mutations.forEach(function(mutation) {
-                    removeElfsightBranding(); // Ensure branding is removed dynamically
-                });
-            });
-    
-            // Observe changes in the document's body
-            observer.observe(document.body, { childList: true, subtree: true });
-        });
-    </script>
-    
 </body>
 </html>
