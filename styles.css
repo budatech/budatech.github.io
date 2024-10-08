@@ -206,6 +206,18 @@ nav {
 
 /* Desktop Layout remains unchanged */
 @media (min-width: 769px) {
+
+    .contact-section {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+   .contact-form, .map-section {
+        flex: 1;
+        max-width: 48%; /* 48% to give some space between them */
+        margin-bottom: 0; /* Remove margin between elements */
+    }
+    
     .menu-button {
         display: none; /* Hide the "MENU" button on desktop */
     }
@@ -414,9 +426,20 @@ footer {
 }
 
 /* Contact form styling */
+
 .contact-section {
+    display: flex;
+    flex-direction: column;
     text-align: left;
     padding: 20px;
+}
+
+.contact-form, .map-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
 .contact-form h2 {
@@ -425,13 +448,12 @@ footer {
     margin-bottom: 20px; /* Add some space below the heading */
 }
 
-.contact-form {
+.contact-form, .map-section {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
-    max-width: 600px;
-    margin: 20px auto;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
 .email-link {
@@ -445,14 +467,6 @@ footer {
     color: #009ed6; /* Optional: change to a hover color */
 }
 
-.map-section {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 600px;
-    margin: 20px auto;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
 
 iframe {
     width: 100%;
