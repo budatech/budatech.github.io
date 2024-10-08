@@ -365,32 +365,6 @@ footer {
     border-radius: 25px;
 }
 
-/* Schedule Calendar styling */
-#schedule-section {
-    text-align: center;
-    padding: 20px;
-}
-
-#back-to-home {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #2890df;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-#back-to-home:hover {
-    background-color: #47cee6;
-}
-
-/* Contact form specific adjustments */
-.send-button {
-    width: 100%;
-    border-radius: 25px;
-}
-
 /* Contact form styling */
 .contact-section {
     text-align: left;
@@ -410,13 +384,14 @@ footer {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
-    width: 48%; /* Each takes up half of the space on larger screens */
+    width: 40%; /* Reduce the width to avoid stretching */
+    max-width: 550px; /* Limit the maximum width */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px; /* Space between stacked elements on mobile */
 }
 
 .map-section {
-    max-width: 48%; /* Half-width for larger screens */
+    max-width: 40%;
 }
 
 @media (max-width: 768px) {
