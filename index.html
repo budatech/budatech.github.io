@@ -128,5 +128,15 @@
             </div>
         </div>
     </footer>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var elfsightLink = document.querySelector('a[href*="elfsight.com/google-reviews-widget"]');
+        if (elfsightLink) {
+            elfsightLink.remove();
+        }
+    });
+    </script>
+    
 </body>
 </html>
