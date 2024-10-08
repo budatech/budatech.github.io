@@ -647,3 +647,7 @@ textarea {
 .services-section:not(.reverse) .services-text-container h3 {
     color: #27bbff; /* Set the color to #27bbff */
 }
+
+a[href*="elfsight.com/google-reviews-widget"] {
+    display: none !important;
+}
