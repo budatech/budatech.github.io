@@ -370,7 +370,8 @@ footer {
     text-align: left;
     padding: 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around; /* Centered alignment with space between */
+    align-items: flex-start;
     flex-wrap: wrap; /* Makes sure they stack on smaller screens */
 }
 
@@ -384,14 +385,14 @@ footer {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
-    width: 40%; /* Reduce the width to avoid stretching */
+    width: 45%; /* Slightly narrower width to fit both with smaller gap */
     max-width: 550px; /* Limit the maximum width */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px; /* Space between stacked elements on mobile */
 }
 
 .map-section {
-    max-width: 40%;
+    max-width: 45%;
 }
 
 @media (max-width: 768px) {
