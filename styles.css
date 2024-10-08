@@ -454,14 +454,14 @@ iframe {
 }
 
 .email-link {
-    color: #00baff; /* Use the blue color used elsewhere */
+    color: #fa534b; /* Use the blue color used elsewhere */
     text-decoration: none; /* Remove underline */
     font-weight: bold; /* Make it bold to match the style */
 }
 
 .email-link:hover {
     text-decoration: none; /* Ensure no underline on hover */
-    color: #009ed6; /* Optional: change to a hover color */
+    color: #d1261e; /* Optional: change to a hover color */
 }
 
 .address-section {
@@ -472,7 +472,7 @@ iframe {
 }
 
 .address-section h3 {
-    color: #00baff;
+    color: #fa534b;
     font-size: 24px;
     margin-bottom: 10px;
 }
