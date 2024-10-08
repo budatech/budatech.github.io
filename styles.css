@@ -651,3 +651,8 @@ textarea {
 a[href*="elfsight.com/google-reviews-widget"] {
     display: none !important;
 }
+
+.elfsight-app-63341106-d96a-4a08-a569-90e41a639459 a[href*="elfsight.com/google-reviews-widget"],
+.elfsight-app-63341106-d96a-4a08-a569-90e41a639459 a[href*="elfsight.com/google-reviews-widget"] svg {
+    display: none !important;
+}
